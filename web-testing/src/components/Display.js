@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Scoretracker = () => {
+const Display = () => {
     return (
         <>
         </>
     )
 }
 
-export default Scoretracker
+export default Display

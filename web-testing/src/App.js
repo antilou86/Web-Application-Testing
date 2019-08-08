@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Scoretracker from './components/Scoretracker';
+import Dashboard from './components/Dashboard';
+import Display from './components/Display';
 
 function App() {
   return (
     <div className="App">
-      <Scoretracker/>       
+      <Display/> 
+      <Dashboard/>       
     </div>
   );
 }
