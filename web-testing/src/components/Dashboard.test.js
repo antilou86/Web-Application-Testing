@@ -29,8 +29,8 @@ describe('<Dashboard/>', () => {
       const strikeButton = wrapper.queryByText(/strike/i);
       const ballButton = wrapper.queryByText(/ball/i);
       const foulButton = wrapper.queryByText(/foul/i);
-      const hitButton = wrapper.queryByText(/foul/i);
+      const hitButton = wrapper.queryByText(/hit/i);
 
-      
+
     })
 })

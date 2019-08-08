@@ -41,14 +41,14 @@ class Dashboard extends React.Component{
     render(){
         return (
             <>
-            <Display /> 
+            <Display counts={this.state}/> 
             
-            <div>
+            <container>
                 <button onClick={() => this.strikeHandler()}>strike</button>
                 <button onClick={() => this.ballHandler()}>ball</button>
                 <button onClick={() => this.foulHandler()}>foul</button>
                 <button onClick={() => this.hitHandler()}>hit</button>
-            </div>
+            </container>
             </>
         )
     }
