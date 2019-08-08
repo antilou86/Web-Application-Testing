@@ -13,10 +13,10 @@ describe('<Dashboard/>', () => {
     it('should contain a div with buttons for strike, ball, foul, and hit.', () => {
       const wrapper = render(<Dashboard/>)
       
-      const strikeButton = wrapper.queryByText(/strike/i);
+      const strikeButton = wrapper.queryByTestId(/strikeButton/i);
       const ballButton = wrapper.queryByText(/ball/i);
       const foulButton = wrapper.queryByText(/foul/i);
-      const hitButton = wrapper.queryByText(/foul/i);
+      const hitButton = wrapper.queryByText(/hit/i);
 
       expect(strikeButton).toBeInTheDocument();
       expect(ballButton).toBeInTheDocument();
@@ -26,11 +26,11 @@ describe('<Dashboard/>', () => {
     it('should update the display with each click', () => {
       const wrapper = render(<Dashboard/>)
       
-      const strikeButton = wrapper.queryByText(/strike/i);
+      const strikeButton = wrapper.queryByTestId(/strikeButton/i);
       const ballButton = wrapper.queryByText(/ball/i);
       const foulButton = wrapper.queryByText(/foul/i);
       const hitButton = wrapper.queryByText(/hit/i);
-
-
+      
+      
     })
 })

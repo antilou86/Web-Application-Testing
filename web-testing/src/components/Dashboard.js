@@ -1,5 +1,5 @@
 import React from 'react';
-import Display from './components/Display';
+import Display from './Display';
 
 class Dashboard extends React.Component{
     constructor(){
@@ -14,14 +14,14 @@ class Dashboard extends React.Component{
             this.setState({
                 strike: this.state.strike + 1
             }) 
-        } else { this.state.strike = 0 };
+        } else { this.setState({strike: 0, ball: 0}) };
     }
     ballHandler = () => {
         if ( this.state.ball < 3 ) {
             this.setState({
                 ball: this.state.ball + 1
             }) 
-        } else { this.state.ball = 0 };
+        } else { this.setState({strike: 0, ball: 0}) };
     }
     foulHandler = () => {
         if ( this.state.strike < 2 ) {
@@ -43,12 +43,12 @@ class Dashboard extends React.Component{
             <>
             <Display counts={this.state}/> 
             
-            <container>
-                <button onClick={() => this.strikeHandler()}>strike</button>
+            <div>
+                <button data-testid="strikeButton" onClick={() => this.strikeHandler()}>strike</button>
                 <button onClick={() => this.ballHandler()}>ball</button>
                 <button onClick={() => this.foulHandler()}>foul</button>
                 <button onClick={() => this.hitHandler()}>hit</button>
-            </container>
+            </div>
             </>
         )
     }
