@@ -14,14 +14,22 @@ class Dashboard extends React.Component{
             this.setState({
                 strike: this.state.strike + 1
             }) 
-        } else { this.setState({strike: 0, ball: 0}) };
+        } else { this.setState({
+            strike: 0, 
+            ball: 0
+            }) 
+        };
     }
     ballHandler = () => {
         if ( this.state.ball < 3 ) {
             this.setState({
                 ball: this.state.ball + 1
             }) 
-        } else { this.setState({strike: 0, ball: 0}) };
+        } else { this.setState({
+            strike: 0, 
+            ball: 0
+            }) 
+        };
     }
     foulHandler = () => {
         if ( this.state.strike < 2 ) {
@@ -45,9 +53,9 @@ class Dashboard extends React.Component{
             
             <div>
                 <button data-testid="strikeButton" onClick={() => this.strikeHandler()}>strike</button>
-                <button onClick={() => this.ballHandler()}>ball</button>
-                <button onClick={() => this.foulHandler()}>foul</button>
-                <button onClick={() => this.hitHandler()}>hit</button>
+                <button data-testid="ballButton" onClick={() => this.ballHandler()}>ball</button>
+                <button data-testid="foulButton" onClick={() => this.foulHandler()}>foul</button>
+                <button data-testid="hitButton" onClick={() => this.hitHandler()}>hit</button>
             </div>
             </>
         )

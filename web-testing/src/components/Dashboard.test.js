@@ -14,23 +14,13 @@ describe('<Dashboard/>', () => {
       const wrapper = render(<Dashboard/>)
       
       const strikeButton = wrapper.queryByTestId(/strikeButton/i);
-      const ballButton = wrapper.queryByText(/ball/i);
-      const foulButton = wrapper.queryByText(/foul/i);
-      const hitButton = wrapper.queryByText(/hit/i);
+      const ballButton = wrapper.queryByTestId(/ballButton/i);
+      const foulButton = wrapper.queryByTestId(/foulButton/i);
+      const hitButton = wrapper.queryByTestId(/hitButton/i);
 
       expect(strikeButton).toBeInTheDocument();
       expect(ballButton).toBeInTheDocument();
       expect(foulButton).toBeInTheDocument();
       expect(hitButton).toBeInTheDocument();
-    }),
-    it('should update the display with each click', () => {
-      const wrapper = render(<Dashboard/>)
-      
-      const strikeButton = wrapper.queryByTestId(/strikeButton/i);
-      const ballButton = wrapper.queryByText(/ball/i);
-      const foulButton = wrapper.queryByText(/foul/i);
-      const hitButton = wrapper.queryByText(/hit/i);
-      
-      
     })
 })
